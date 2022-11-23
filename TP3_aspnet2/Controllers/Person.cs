@@ -31,8 +31,6 @@ namespace TP3_aspnet2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection person_data)
-
-            // COMO EU FAÇO PARA ELE SERIALIZAR A DATA DO HTML?
         {
             try
             {
@@ -66,9 +64,6 @@ namespace TP3_aspnet2.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(IFormCollection LastName)
-
-            // COMO EU FAÇO PARA EDITAR OU EXCLUIR O ORIGNAL?
-
         {
             try
             {
