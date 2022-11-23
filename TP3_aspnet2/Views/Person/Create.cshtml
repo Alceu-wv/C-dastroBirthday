@@ -1,0 +1,15 @@
+﻿@model List<TP3_aspnet2.Models.Person>
+@{
+}
+
+<form method="post" action="/Person/Create">
+    @Html.AntiForgeryToken()
+    <label>Nome</label>
+    <input type="text" name="FirstName" />
+    <label>Sobrenome</label>
+    <input type="text" name="LastName" />
+    <label>Aniversário</label>
+    <input type="date" name="Birthday" />
+
+    <input type="submit" value="Enviar" />
+</form>

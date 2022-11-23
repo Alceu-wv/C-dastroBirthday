@@ -1,0 +1,37 @@
+﻿@model List<TP3_aspnet2.Models.Person>
+@{
+}
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Sobrenome</td>
+            <td>Aniversário</td>
+            <td>Editar</td>
+            <td>Excluir</td>
+        </tr>
+    </thead>
+    @{
+        foreach (var person in Model)
+        {
+            <tr>
+                <td>
+                    @person.FirstName
+                </td>
+                <td>
+                    @person.LastName
+                </td>
+                <td>
+                    @person.Birthday.ToString()
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", "Person", new { LastName = person.LastName })
+                </td>
+                <td>
+                    @Html.ActionLink("Excluir", "Delete", "Person", new { LastName = person.LastName })
+                </td>
+            </tr>
+        }
+    }
+</table>
